@@ -25,17 +25,18 @@
   "plugins": ["@typescript-eslint"],
   "extends": [
     "next/core-web-vitals",
-    // "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
     "plugin:security/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/ban-types": [
-      "warn",
+      "error",
       {
         "types": {
           "Function": false
@@ -62,7 +63,7 @@
       }
     ],
     "jsx-a11y/anchor-is-valid": [
-      "warn",
+      "error",
       {
         "components": ["Link"],
         "specialLink": ["hrefLeft", "hrefRight"],
